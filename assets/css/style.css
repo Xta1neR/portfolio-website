@@ -383,6 +383,26 @@ main.drake-main {
     color: var(--primary_color);
 }
 
+#My-name-sidebar{
+    font-family:monospace;
+    letter-spacing: 2px;
+    font-weight: 900;
+    font-size: 25px;
+    color: var(--primary_color);
+}
+
+#social-icons-side{
+    font-size: 35px;
+    color: #aea17a;
+    margin-top: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+#DropdownSelect{
+    color: #000;
+}
+
 /* 03 - Global Color */
 .global-color {
     position: fixed;
@@ -775,7 +795,7 @@ main.drake-main {
 }
 .hero-section .hero-content .go-to-project-btn img {
     display: block;
-    animation: rotating 10s infinite linear;
+    animation: rotating 10  s infinite linear;
 }
 .hero-section .hero-content .go-to-project-btn i {
     position: absolute;

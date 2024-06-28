@@ -28,6 +28,32 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
 
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init({
+              publicKey: "RvCJ0oxG8lZu_geyy",
+            });
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // these IDs from the previous steps
+                emailjs.sendForm('contact_service', 'contact_form', this)
+                    .then(() => {
+                        console.log('SUCCESS!');
+                    }, (error) => {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
+    
+
 </head>
 <body>
 
@@ -170,17 +196,17 @@
 
     <!-- DESKTOP  -->
     <div class="left-sidebar">
-        <h2>RITURAJ GOSWAMI</h2>
+        <h2 id="My-name-sidebar">RITURAJ GOSWAMI</h2>
         <img class="me" src="assets/images/me.jpg" alt="Me">
         <ul class="social-profile d-flex justify-content-center">
             <li>
-                <a href="https://www.linkedin.com/in/rituraj-g0swami/" target="_blank"><i class="lab la-linkedin"></i></a>
+                <a href="https://www.linkedin.com/in/rituraj-g0swami/" target="_blank"><i class="lab la-linkedin" id="social-icons-side"></i></a>
             </li>
             <li>
-                <a href="https://www.instagram.com/lifebyrituraj/" target="_blank"><i class="lab la-instagram"></i></a>
+                <a href="https://www.instagram.com/lifebyrituraj/" target="_blank"><i class="lab la-instagram" id="social-icons-side"></i></a>
             </li>
             <li>
-                <a href="https://github.com/Xta1neR" target="_blank"><i class="lab la-github"></i></a>
+                <a href="https://github.com/Xta1neR" target="_blank"><i class="lab la-github" id="social-icons-side"></i></a>
             </li>
         </ul>
         <a href="mailto:rituraj_goswami@outlook.com" target="_blank" class="theme-btn">
@@ -197,18 +223,18 @@
             <div id="smooth-content">
 
                 <div class="left-sidebar">  
-                    <h2>RITURAJ GOSWAMI</h2>
+                    <h2 id="My-name-sidebar">RITURAJ GOSWAMI</h2>
                     <hr>
                     <img class="me" src="assets/images/me.jpg" alt="Me">
                     <ul class="social-profile d-flex align-items-center flex-wrap justify-content-center">
                         <li>
-                            <a href="https://www.linkedin.com/in/rituraj-g0swami/" target="_blank"><i class="lab la-linkedin"></i></a>
+                            <a href="https://www.linkedin.com/in/rituraj-g0swami/" target="_blank"><i class=" lab la-linkedin" id="social-icons-side"></i></a>
                         </li>
                         <li>
-                            <a href="https://www.instagram.com/lifebyrituraj/" target="_blank"><i class="lab la-instagram"></i></a>
+                            <a href="https://www.instagram.com/lifebyrituraj/" target="_blank"><i class="lab la-instagram" id="social-icons-side"></i></a>
                         </li>
                         <li>
-                            <a href="https://github.com/Xta1neR" target="_blank"><i class="lab la-github"></i></a>
+                            <a href="https://github.com/Xta1neR" target="_blank"><i class="lab la-github" id="social-icons-side"></i ></a>
                         </li>
                     </ul>
                     <a href="#" class="theme-btn">
@@ -231,7 +257,7 @@
                                 </h4>
                                 <h1 class="scroll-animation" data-animation="fade_from_bottom">Hi 👋 , <span>I am Rituraj</span><br> A Full Stack Web Developer</h1>
                             </div>
-                            <p class="scroll-animation" data-animation="fade_from_bottom">I design and code beautifully simple things and I love what I do. Just simple like that!</p>
+                            <p class="scroll-animation" data-animation="fade_from_bottom">I design and code  simple things beautifully and I love what I do. Just simple like that!</p>
                             <a href="#portfolio" 
                                 class="go-to-project-btn scroll-to scroll-animation" 
                                 data-animation="rotate_up">
@@ -249,7 +275,7 @@
                                 <h4 class="subtitle scroll-animation" data-animation="fade_from_bottom">
                                     <i class="lar la-user"></i> About
                                 </h4>
-                                <h1 class="scroll-animation" data-animation="fade_from_bottom">Every great design begin with<br>
+                                <h1 class="scroll-animation" data-animation="fade_from_bottom">Every great design begin's with<br>
                                     an even <span>better story</span></h1>
                             </div>
                             <p class="scroll-animation" data-animation="fade_from_bottom">I specialize in Python and web technologies such as Django and React. I've developed a range of applications, including a secure banking platform deployed on AWS with advanced security features like encryption and stringent authentication. My projects highlight expertise in implementing role-based access controls and creating an expense tracker with data visualization using Django and JavaScript. Certified in Generative AI from Google Cloud, I emphasize ethical AI development. Recently, I completed a Backend Development course with Meta, gaining hands-on experience in API integration using Django and Flask. I'm passionate about leveraging technology to create efficient and secure solutions, continually learning and adapting to stay at the forefront of software development.</p>
@@ -487,12 +513,12 @@
     
 
 
-                <section class="contact-area page-section scroll-content" id="contact">
+                <section class="contact-area page-section scroll-content" id="contact-form">
                     <div class="custom-container">
                         <div class="contact-content content-width">
                             <div class="section-header">
                                 <h4 class="subtitle scroll-animation" data-animation="fade_from_bottom">
-                                    <i class="las la-dollar-sign"></i> contact
+                                    <i class="las  la-grip-horizontal"></i> contact
                                 </h4>
                                 <h1 class="scroll-animation" data-animation="fade_from_bottom">Let's Work <span>Together!</span></h1>
                             </div>
@@ -507,29 +533,29 @@
                                     <div class="col-md-6">
                                         <div class="input-group">
                                             <label for="full-name">full Name <sup>*</sup></label>
-                                            <input type="text" name="full-name" id="full-name" placeholder="Your Full Name">
+                                            <input type="text" name="user_name" id="full-name" placeholder="Your Full Name">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="input-group">
                                             <label for="email">Email <sup>*</sup></label>
-                                            <input type="email" name="email" id="email" placeholder="Your email adress">
+                                            <input type="email" name="user_email" id="email" placeholder="Your email adress">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="input-group">
                                             <label for="phone-number">phone <span>(optional)</span></label>
-                                            <input type="text" name="phone-number" id="phone-number" placeholder="Your number phone">
+                                            <input type="text" name="contact_number" id="phone-number" placeholder="Your number phone">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="input-group">
                                             <label for="subject">subject <sup>*</sup></label>
                                             <select name="subject" id="subject">
-                                                <option value="">Select a subject</option>
-                                                <option value="subject1">Hire Me</option>
-                                                <option value="subject2">Need Help with a Project</option>
-                                                <option value="subject3">Other/Personal</option>
+                                                <option id="DropdownSelect" value="">Select a subject</option>
+                                                <option id="DropdownSelect" value="subject1">Hire Me</option>
+                                                <option id="DropdownSelect" value="subject2">Need Help with a Project</option>
+                                                <option id="DropdownSelect" value="subject3">Other/Personal</option>
                                             </select>
                                         </div>
                                     </div>

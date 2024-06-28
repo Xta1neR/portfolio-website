@@ -126,8 +126,8 @@
 
 @media (max-width: 767px) {
     .icon-menu {
-        right: 30px;
-        top: 30px;
+        right: 15px;
+        top: 40px;
     }
     .hero-section .hero-content .go-to-project-btn {
         margin-left: 0;
@@ -228,7 +228,7 @@
         display: block;
     }
     .global-color .inner .global-color-option h2 {
-        margin-bottom: 60px;
+        margin-bottom: 50px;
     }
     .global-color .inner .global-color-option {
         padding: 100px 50px;

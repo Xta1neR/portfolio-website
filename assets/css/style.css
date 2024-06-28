@@ -87,6 +87,15 @@ ul {
     cursor: pointer;
     border: 2px solid var(--primary_color);
 }
+#contact-msg{
+    cursor: pointer;
+    transition: transform .2s;
+}
+
+#contact-msg:hover{
+    color: #cceb00;
+    transform: scale(1.5);
+}
 .theme-btn i {
     font-size: 24px;
     margin-right: 10px;

@@ -132,9 +132,11 @@
     .hero-section .hero-content .go-to-project-btn {
         margin-left: 0;
     }
-    .skills-area .skills-content .row .col-md-3 {
-        flex: 0 0 auto;
-        width: 50%;
+    .skills-area .skills-content .row .col-sm-3 {
+        display: flex;
+        flex-direction: row;
+        flex-basis: 33.33%;
+        width: 10%;
     }
     .clients-logos .row .col-md-3 {
         flex: 0 0 auto;
